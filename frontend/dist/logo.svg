@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stakeholder Translator">
+  <defs>
+    <linearGradient id="st-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123f80"/>
+      <stop offset="1" stop-color="#0a2c5c"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="url(#st-bg)"/>
+  <!-- rising bar chart -->
+  <g fill="#ffffff">
+    <rect x="13" y="40" width="9" height="12" rx="2"/>
+    <rect x="27" y="32" width="9" height="20" rx="2"/>
+    <rect x="41" y="23" width="9" height="29" rx="2"/>
+  </g>
+  <!-- growth trend arrow -->
+  <path d="M15 41 L29 33 L37 37 L51 22" fill="none" stroke="#e8b12e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M51 22 L44 22 M51 22 L51 29" fill="none" stroke="#e8b12e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- coin with dollar sign -->
+  <circle cx="17.5" cy="18" r="9.5" fill="#e8b12e"/>
+  <circle cx="17.5" cy="18" r="9.5" fill="none" stroke="#0a2c5c" stroke-opacity="0.15" stroke-width="1"/>
+  <path d="M17.5 12.2 V23.8 M20.4 14.3 C19.6 13.4 18.6 13 17.5 13 C15.9 13 14.6 13.9 14.6 15.3 C14.6 18.4 20.6 17.2 20.6 20.5 C20.6 22 19.2 23 17.5 23 C16.2 23 15.1 22.5 14.4 21.6" fill="none" stroke="#0a2c5c" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,323 @@
+/* ============================================================
+   Stakeholder Translator — global tokens & base styles
+   A brand-neutral enterprise design system (light + dark).
+   Status colors use the validated data-viz palette so the
+   RAG dashboard reads correctly for colour-vision deficiency.
+   ============================================================ */
+
+:root {
+  color-scheme: light dark;
+
+  /* Type */
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-serif: "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Consolas", "SF Mono", monospace;
+
+  /* Surfaces & ink (light) */
+  --page: #eef1f5;
+  --surface: #ffffff;
+  --surface-2: #f6f8fa;
+  --surface-3: #eef1f4;
+  --border: #dde3ea;
+  --border-strong: #c6cfd9;
+  --text: #0b1f33;
+  --text-2: #4a5a6b;
+  --text-3: #7a8794;
+
+  /* Brand */
+  --brand: #0a2c5c;
+  --brand-2: #113f80;
+  --brand-ink: #ffffff;
+  --accent: #ce0e2d;
+
+  /* Status (validated data-viz palette) */
+  --good: #0ca30c;
+  --good-ink: #0f7a2e;
+  --good-bg: #e9f6ec;
+  --good-border: #b7e2be;
+
+  --warn: #b7791f;
+  --warn-ink: #8a5a12;
+  --warn-bg: #fbf3e3;
+  --warn-border: #ecd9ac;
+
+  --bad: #d03b3b;
+  --bad-ink: #a31f1f;
+  --bad-bg: #fbeaea;
+  --bad-border: #f0c4c4;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(11, 31, 51, 0.06),
+    0 1px 3px rgba(11, 31, 51, 0.04);
+  --shadow: 0 4px 12px rgba(11, 31, 51, 0.08),
+    0 2px 4px rgba(11, 31, 51, 0.05);
+  --shadow-lg: 0 12px 32px rgba(11, 31, 51, 0.14),
+    0 4px 10px rgba(11, 31, 51, 0.08);
+
+  /* Geometry */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-xs: 6px;
+
+  --ring: 0 0 0 3px rgba(17, 63, 128, 0.28);
+
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #0c1420;
+    --surface: #131e2c;
+    --surface-2: #17242f;
+    --surface-3: #1d2b3a;
+    --border: #263647;
+    --border-strong: #33475c;
+    --text: #eaf0f6;
+    --text-2: #a9b8c7;
+    --text-3: #74869a;
+
+    --brand: #1f4f96;
+    --brand-2: #2a63b8;
+    --brand-ink: #ffffff;
+    --accent: #ff5670;
+
+    --good: #2fbf5a;
+    --good-ink: #7ee39a;
+    --good-bg: #12281a;
+    --good-border: #205c34;
+
+    --warn: #eab04a;
+    --warn-ink: #f4cf8a;
+    --warn-bg: #2a2011;
+    --warn-border: #5c4620;
+
+    --bad: #f16b6b;
+    --bad-ink: #ffb0b0;
+    --bad-bg: #2a1414;
+    --bad-border: #5c2626;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+
+    --ring: 0 0 0 3px rgba(42, 99, 184, 0.4);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--page);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+textarea,
+input {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(17, 63, 128, 0.18);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: var(--radius-xs);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ============================================================
+   Shared UI primitives (used by the app and the login page)
+   ============================================================ */
+
+.btn {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  transition: transform 0.06s ease, background 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  background: var(--brand);
+  color: var(--brand-ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:not(:disabled):hover {
+  background: var(--brand-2);
+}
+
+.btn--ghost {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.btn--ghost:hover {
+  background: var(--surface-2);
+}
+
+/* Subtle secondary action — replaces the old text "links" */
+.btn--soft {
+  background: var(--surface-2);
+  color: var(--brand-2);
+  border-color: var(--border);
+}
+
+.btn--soft:hover {
+  background: var(--surface-3);
+  border-color: var(--border-strong);
+}
+
+.btn--sm {
+  padding: 6px 12px;
+  font-size: 12.5px;
+}
+
+.btn--block {
+  width: 100%;
+  justify-content: center;
+}
+
+.link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-2);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.link:hover {
+  border-bottom-color: currentColor;
+}
+
+.link--muted {
+  color: var(--text-3);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-3);
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.icon-btn:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+/* Status text */
+.status {
+  font-size: 12.5px;
+  font-weight: 500;
+}
+.status--good {
+  color: var(--good-ink);
+}
+.status--bad {
+  color: var(--bad-ink);
+}
+.status--warn {
+  color: var(--warn-ink);
+}
+.status--muted {
+  color: var(--text-2);
+}
+
+/* Form fields */
+.field {
+  display: block;
+}
+
+.field__label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.field__input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xs);
+}
+
+.field__input:focus {
+  border-color: var(--brand-2);
+}
+
+.field__hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-3);
+}
