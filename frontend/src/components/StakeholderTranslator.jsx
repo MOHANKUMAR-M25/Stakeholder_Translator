@@ -243,7 +243,7 @@ export default function StakeholderTranslator({ user, onSignOut }) {
     <div className="app">
       <header className="app__header">
         <div className="brand">
-      <img className="brand__logo" src={import.meta.env.BASE_URL + "logo.svg"} alt="" width="44" height="44" />
+      <img className="brand__logo" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" width="44" height="44" />
           <div>
             <h1 className="brand__title">Stakeholder Translator (QEA)</h1>
             <p className="brand__sub">
