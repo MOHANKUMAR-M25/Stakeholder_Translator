@@ -78,7 +78,7 @@ export default function Login({ onAuth }) {
   return (
     <div className="auth">
       <div className="auth__card">
-        <img className="auth__logo" src="/logo.svg" alt="" width="56" height="56" />
+        <img className="auth__logo" src={import.meta.env.BASE_URL + "logo.svg"} alt="" width="56" height="56" />
         <h1 className="auth__title">Stakeholder Translator (QEA)</h1>
         <p className="auth__sub">Sign in to turn test reports into stakeholder-ready narratives.</p>
 
